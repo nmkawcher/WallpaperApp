@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:provider/provider.dart';
+import 'package:wallpaper_app/core/utils/color_resources.dart';
 import 'package:wallpaper_app/data/provider/image_details_provider.dart';
 
 class ImageDetailsPage extends StatelessWidget {
@@ -38,27 +39,27 @@ class ImageDetailsPage extends StatelessWidget {
                 ),
                 floatingActionButton: SpeedDial(
                   animatedIcon: AnimatedIcons.menu_close,
-                  backgroundColor: Colors.black,
-                  overlayColor: Colors.black,
+                  backgroundColor:ColorResources.fabBackgroundColor,
+                  overlayColor:ColorResources.fabOverlayColor,
                   overlayOpacity: 0.4,
                   //closeManually: true,
-                  animationSpeed: 500,
+                  animationSpeed: 600,
                   closeDialOnPop: true,
                   spacing: 12,
                   spaceBetweenChildren: 12,
                   children: [
                     SpeedDialChild(
-                      child: Icon(Icons.download_outlined),
+                      child: const Icon(Icons.download_outlined),
                       label: 'Download',
                       onTap: () => provider.downloadImage(context, imageUrl),
                     ),
                     SpeedDialChild(
-                      child: Icon(Icons.share),
+                      child: const Icon(Icons.share),
                       label: 'Share',
                       onTap: () => provider.shareImage(context, imageUrl),
                     ),
                     SpeedDialChild(
-                      child: Icon(Icons.wallpaper_outlined),
+                      child: const Icon(Icons.wallpaper_outlined),
                       label: 'Make it Wallpaper',
                       onTap: () => provider.makeImageAsWallpaper(context, imageUrl),
                     ),

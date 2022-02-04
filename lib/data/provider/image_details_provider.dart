@@ -25,7 +25,7 @@ class ImageDetailsProvider with ChangeNotifier{
   makeImageAsWallpaper(BuildContext context,String imageUrl){
     isLoading=true;
     notifyListeners();
-    imageDetailsRepo.setWallpaper(imageUrl).then((value){
+    imageDetailsRepo.setWallpaper(context,imageUrl).then((value){
       isLoading=false;
       notifyListeners();
     });

@@ -5,6 +5,7 @@ import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:wallpaper_app/core/utils/color_resources.dart';
 
 class ImageDetailsRepo {
   List<String> imagePaths = [];
@@ -21,18 +22,20 @@ class ImageDetailsRepo {
     return true;
   }
 
-  Future<bool> setWallpaper(String imageUrl) async {
+  Future<bool> setWallpaper(BuildContext context,String imageUrl) async {
     try {
       int location = WallpaperManager
           .BOTH_SCREEN; // or location = WallpaperManager.LOCK_SCREEN;
       var file = await DefaultCacheManager().getSingleFile(imageUrl);
       final bool result =
           await WallpaperManager.setWallpaperFromFile(file.path, location);
+      showSnackbar('wallpaper changed successfully', ColorResources.successSnackbarColor, context);
       return result;
     } catch (e) {
       if (kDebugMode) {
         print(e.toString());
       }
+      showSnackbar('uffs! fail to changing wallpaper pls try again.', ColorResources.errorSnackbarColor, context);
       return false;
     }
   }
@@ -46,7 +49,7 @@ class ImageDetailsRepo {
     final name = 'aits_$time';
     var file = await DefaultCacheManager().getSingleFile(imageUrl);
     await ImageGallerySaver.saveImage(file.readAsBytesSync(), name: name);
-    showSnackbar('successfully image save in gallery', Colors.green, context);
+    showSnackbar('successfully image save in gallery',ColorResources.successSnackbarColor, context);
     return true;
   }
 
@@ -57,7 +60,6 @@ class ImageDetailsRepo {
       content: Text(message),
       shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
       backgroundColor: backgroundColor,
-      padding: const EdgeInsets.all(5),
       duration: const Duration(seconds: 2),
     ));
   }
