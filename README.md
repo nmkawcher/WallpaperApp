@@ -35,8 +35,9 @@
 ![image](https://user-images.githubusercontent.com/46804139/152598006-c61983a5-62c9-41ce-8f3d-7dddfe66ad13.png)
 
 
-#app Architecture 
-
+**App Architecture:**
+<br/>
+<br/>
 
 ![image](https://user-images.githubusercontent.com/46804139/152598213-b0ba4e7d-409e-49c0-a868-b938cb0abf59.png)
 
@@ -44,17 +45,19 @@
 
 
 
-#tools and technology: 
-Defendency Injection for reduce Tight Coupeling,
-Provider For StateManagement
-MVVM(c) as a design pattern.
-library:
-share_plus: for sharing content with other application
-image_gallery_saver: for saving image in gallery
-permission_handler: for hadling user permission
-flutter_wallpaper_manager: we use it for set image as a wallpaper
-flutter_cache_manager: we use it for managing ceach in our app. though for lack of time i can't implement api cacheing in proper way. but i will implement it as soon as possible.
+**Tools and Technology:<br/>** 
+***Defendency Injection<br />
+Provider For StateManagement,<br />
+MVVM(c) as a design pattern.***<br />
 
-Note: For lack of time we cann't implement theming,localization , also i can't focus on ui. 
-
-upcomming: theming,cache api response,localization,caching(with more organize way) etc.
+**library:<br/>
+share_plus: for sharing content with other application <br/>
+image_gallery_saver: for saving image in gallery <br/>
+permission_handler: for hadling user permission <br/>
+flutter_wallpaper_manager: we use it for set image as a wallpaper<br/>
+flutter_cache_manager: we use it for managing ceach in our app. though for lack of time i can't implement api cacheing in proper way. but i will implement it as soon as possible.**
+<br/>
+<br/>
+**Note: For lack of time we cann't implement theming,localization , also i can't focus on ui.** 
+<br/>
+**Upcomming: theming,cache api response,localization,caching(with more organize way) etc.**
