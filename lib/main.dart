@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wallpaper_app/views/home_screen/home_page.dart';
+import 'package:wallpaper_app/views/home_page/home_page.dart';
 
+import 'data/provider/image_details_provider.dart';
 import 'data/provider/wallpaper_provider.dart';
 import 'di_container.dart' as di;
 
@@ -11,6 +12,7 @@ Future<void> main() async {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => di.sl<WallPaperProvider>()),
+      ChangeNotifierProvider(create: (context) => di.sl<ImageDetailsProvider>()),
     ],
     child: const MyApp(),
   ));

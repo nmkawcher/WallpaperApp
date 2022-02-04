@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wallpaper_app/data/provider/wallpaper_provider.dart';
+import 'package:wallpaper_app/views/image_details_page/image_details_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -32,7 +33,11 @@ class HomePage extends StatelessWidget {
              }
              return InkWell(
                onTap: () {
-
+                 Navigator.push(
+                     context,
+                     MaterialPageRoute(
+                         builder: (context) =>
+                             ImageDetailsPage( imageUrl: provider.images[index].downloadUrl.toString())));
                },
                child: Container(
                  height: 100,
