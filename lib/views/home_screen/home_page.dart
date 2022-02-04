@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Provider.of<WallPaperProvider>(context,listen: false).loadImages();
+    Provider.of<WallPaperProvider>(context,listen: false).initInitialValue();
     return SafeArea(
       child: Scaffold(
         body: buildWallPaperListView(context),
@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
   buildWallPaperListView(context) {
     return Consumer<WallPaperProvider>(builder: (ctx, provider, child) {
        return GridView.builder(
+         controller: provider.controller,
          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: 1.2 / 1.4),
          itemCount: provider.images.length,
            itemBuilder: (context,index){
