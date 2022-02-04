@@ -9,4 +9,6 @@ class ColorResources{
 
   static const Color successSnackbarColor=Colors.green;
   static const Color errorSnackbarColor=Colors.deepOrange;
+
+  static const Color imageLoaderBgColor=Colors.blueGrey;
 }

@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:wallpaper_app/core/utils/color_resources.dart';
 import 'package:wallpaper_app/data/provider/wallpaper_provider.dart';
 import 'package:wallpaper_app/views/image_details_page/image_details_page.dart';
 
@@ -68,8 +69,11 @@ class HomePage extends StatelessWidget {
     );
   }
   Widget _loader(BuildContext context, String url) {
-    return const Center(
-      child: CupertinoActivityIndicator(),
+    return Center(
+      child: Container(width:double.infinity,height:double.infinity,decoration:BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: ColorResources.imageLoaderBgColor,
+      ),child: const CupertinoActivityIndicator()),
     );
   }
   Widget _error(BuildContext context, String url, dynamic error) {

@@ -40,8 +40,6 @@ class ImageDetailsPage extends StatelessWidget {
                 floatingActionButton: SpeedDial(
                   animatedIcon: AnimatedIcons.menu_close,
                   backgroundColor:ColorResources.fabBackgroundColor,
-                  overlayColor:ColorResources.fabOverlayColor,
-                  overlayOpacity: 0.4,
                   //closeManually: true,
                   animationSpeed: 600,
                   closeDialOnPop: true,
