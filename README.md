@@ -54,10 +54,10 @@ MVVM(c) as a design pattern.***<br />
 share_plus: for sharing content with other application <br/>
 image_gallery_saver: for saving image in gallery <br/>
 permission_handler: for hadling user permission <br/>
-flutter_wallpaper_manager: we use it for set image as a wallpaper<br/>
-flutter_cache_manager: we use it for managing ceach in our app. though for lack of time i can't implement api cacheing in proper way. but i will implement it as soon as possible.**
+flutter_wallpaper_manager: i use it for set image as a wallpaper<br/>
+flutter_cache_manager: i use it for managing ceach in our app. though for lack of time i can't implement api cacheing in proper way. but i will implement it as soon as possible.**
 <br/>
 <br/>
-**Note: For lack of time we cann't implement theming,localization , also i can't focus on ui.** 
+**Note: For lack of time i cann't implement theming,localization , also i can't focus on ui.** 
 <br/>
 **Upcomming: theming,cache api response,localization,caching(with more organize way) etc.**
